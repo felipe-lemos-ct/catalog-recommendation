@@ -5,13 +5,14 @@ import { PERMISSIONS, entryPointUriPath } from './src/constants';
  */
 const config = {
   name: 'Catalog Recommendation Manager',
-  entryPointUriPath,
+  entryPointUriPath: '${env:ENTRY_POINT_URI_PATH}',
   cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   env: {
     development: {
-      initialProjectKey: '${env:PROJECT_KEY}',
+      initialProjectKey: 'my-project-key',
     },
     production: {
+      applicationId: '${env:CUSTOM_APPLICATION_ID}',
       url: '${env:APPLICATION_URL}',
     },
   },
