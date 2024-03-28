@@ -4,12 +4,12 @@ import { PERMISSIONS, entryPointUriPath } from './src/constants';
  * @type {import('@commercetools-frontend/application-config').ConfigOptionsForCustomApplication}
  */
 const config = {
-  name: 'Catalog Recommendation Manager',
+  name: 'Catalog Recommendation',
   entryPointUriPath,
-  cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
+  cloudIdentifier: 'gcp-eu',
   env: {
     development: {
-      initialProjectKey: 'my-project-key',
+      initialProjectKey: 'adopt-parfums',
     },
     production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
