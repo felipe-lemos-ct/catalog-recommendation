@@ -1,7 +1,6 @@
 deployAs:
   - name: catalog-recommendation
-    applicationType: mc-app
-    endpoint: /
+    applicationType: merchant-center-custom-application
     configuration:
       standardConfiguration:
         - key: CTP_PROJECT_KEY
