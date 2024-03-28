@@ -48,7 +48,7 @@ const CatalogRecommendation: React.FC = () => {
         ]);
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   }
 

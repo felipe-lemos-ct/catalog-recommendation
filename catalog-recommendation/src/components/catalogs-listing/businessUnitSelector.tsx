@@ -28,7 +28,7 @@ const BusinessUnitSelector: React.FC<BusinessUnitSelectorProps> = ({
           ]);
         });
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     }
     retrieveBusinessUnits();

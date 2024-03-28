@@ -18,7 +18,7 @@ const CatalogsListing: React.FC = () => {
         const shoppingLists = await getShoppingLists();
         setShoppingLists(shoppingLists.results);
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     }
     retrieveShoppingLists();
