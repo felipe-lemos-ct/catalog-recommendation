@@ -42,7 +42,7 @@ const useShoppingLists = (): any => {
       return data;
     } catch (error) {
       //@ts-ignore
-      console.log(error?.response?.data);
+      //console.log(error?.response?.data);
       //@ts-ignore
       return error?.response?.data;
     }
