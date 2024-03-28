@@ -3,33 +3,15 @@ deployAs:
     applicationType: merchant-center-custom-application
     configuration:
       standardConfiguration:
-        - key: CTP_PROJECT_KEY
-          description: Project key of the commercetools Composable Commerce Project
-          required: true
-        - key: CTP_REGION
-          description: Region where the commercetools Composable Commerce Project is hosted
-          required: true
-        - key: APPLICATION_ID
+        - key: CUSTOM_APPLICATION_ID
           description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
-          required: true
-        - key: APPLICATION_URL
-          description: custom app production app URL
           required: true
         - key: CLOUD_IDENTIFIER
           description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
-          required: true
           default: "gcp-eu"
-        - key: INITIAL_PROJECT_KEY
-          description: development project key
-          required: false
-        - key: ENABLE_NEW_JSX_TRANSFORM
-          description: enable new jsx transform
+        - key: ENTRY_POINT_URI_PATH
+          description: The Application entry point URI path identified during registration of Custom Application
           required: true
-          default: "true"
-    securedConfiguration:
-      - key: CTP_CLIENT_ID
-        description: client_id of an API Client for the commercetools Composable Commerce Project
-        required: true
-      - key: CTP_CLIENT_SECRET
-        description: secret of an API Client for the commercetools Composable Commerce Project
-        required: true
+        - key: APPLICATION_URL
+          description: The Application URL
+          required: false
