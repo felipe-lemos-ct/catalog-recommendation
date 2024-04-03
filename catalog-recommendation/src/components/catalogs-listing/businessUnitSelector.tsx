@@ -32,7 +32,7 @@ const BusinessUnitSelector: React.FC<BusinessUnitSelectorProps> = ({
       }
     }
     retrieveBusinessUnits();
-  });
+  }, []);
 
   return (
     <>

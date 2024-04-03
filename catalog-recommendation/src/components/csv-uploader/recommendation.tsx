@@ -104,7 +104,7 @@ const CatalogRecommendation: React.FC = () => {
       }
     }
     retrieveBusinessUnits();
-  });
+  }, []);
 
   const { createErrorsJsonFile } = exportErrors();
 
