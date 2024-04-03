@@ -165,7 +165,8 @@ const CSVUploader: React.FC<CSVUploaderProps> = ({
                           <>
                             {searchValue.length > 0 ? (
                               <p className="text-lg pt-4">
-                                No skus found on the list
+                                No skus with <b>&quot;{searchValue}&quot;</b>
+                                found on the list
                               </p>
                             ) : null}
                           </>
