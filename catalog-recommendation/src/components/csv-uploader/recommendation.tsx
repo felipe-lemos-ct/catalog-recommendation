@@ -111,14 +111,15 @@ const CatalogRecommendation: React.FC = () => {
   return (
     <>
       <div>
-        <div>
-          <CSVUploader
-            setFileName={setFileName}
-            setCSVData={handleCSVDataChange}
-            csvData={csvData}
-          />
+        <div className="flex">
+          <div>
+            <CSVUploader
+              setFileName={setFileName}
+              setCSVData={handleCSVDataChange}
+              csvData={csvData}
+            />
+          </div>
         </div>
-
         {csvData.length > 0 ? (
           <div>
             <p className="pb-2">Total SKUs: {csvData.length}</p>
