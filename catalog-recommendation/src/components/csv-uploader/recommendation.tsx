@@ -7,6 +7,7 @@ import PrimaryButton from '@commercetools-uikit/primary-button';
 import useBusinessUnits from '../../hooks/useBusinessUnits';
 import useShoppingLists from '../../hooks/useShoppingLists';
 import exportErrors from '../../utils/exportErrors';
+import { PageContentFull } from '@commercetools-frontend/application-components';
 
 interface CSVData {
   sku: string;
@@ -109,7 +110,7 @@ const CatalogRecommendation: React.FC = () => {
   const { createErrorsJsonFile } = exportErrors();
 
   return (
-    <>
+    <PageContentFull>
       <div>
         <div className="flex">
           <div>
@@ -137,18 +138,20 @@ const CatalogRecommendation: React.FC = () => {
           </div>
         ) : null}
       </div>
-      <PrimaryButton
-        style={{ width: 250, textAlign: 'justify', marginTop: 10 }}
-        label="Create Recommendation Lists"
-        type="button"
-        size="big"
-        isDisabled={csvData.length < 1}
-        onClick={() =>
-          shoppingLists.map((shoppingList) => {
-            execute(shoppingList);
-          })
-        }
-      />
+      <div>
+        <PrimaryButton
+          style={{ width: 250, textAlign: 'justify', marginTop: 10 }}
+          label="Create Recommendation Lists"
+          type="button"
+          size="big"
+          isDisabled={csvData.length < 1}
+          onClick={() =>
+            shoppingLists.map((shoppingList) => {
+              execute(shoppingList);
+            })
+          }
+        />
+      </div>
 
       {successfulCreations.length > 0 || failedCreations.length > 0 ? (
         <div className="pb-2 pt-5">
@@ -222,7 +225,7 @@ const CatalogRecommendation: React.FC = () => {
           )}
         </div>
       ) : null}
-    </>
+    </PageContentFull>
   );
 };
 

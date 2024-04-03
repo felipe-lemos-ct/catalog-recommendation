@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import SelectInput from '@commercetools-uikit/select-input';
 import useBusinessUnits from '../../hooks/useBusinessUnits';
+import Text from '@commercetools-uikit/text';
 
 interface BusinessUnitSelectorProps {
   setSelection: any;
@@ -37,13 +38,18 @@ const BusinessUnitSelector: React.FC<BusinessUnitSelectorProps> = ({
   return (
     <>
       {businessUnits ? (
-        <SelectInput
-          value={selection}
-          options={businessUnits}
-          onChange={(event) => {
-            setSelection(event?.target.value);
-          }}
-        ></SelectInput>
+        <>
+          <div className=" pb-2">
+            <Text.Headline as="h2">Select a Business Unit: </Text.Headline>
+          </div>
+          <SelectInput
+            value={selection}
+            options={businessUnits}
+            onChange={(event) => {
+              setSelection(event?.target.value);
+            }}
+          ></SelectInput>
+        </>
       ) : null}
     </>
   );

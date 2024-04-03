@@ -67,7 +67,44 @@ const useShoppingLists = (): any => {
     return data;
   };
 
-  return { createShoppingList, getShoppingLists };
+  const deleteShoppingListById = async (
+    id: any,
+    version: any,
+    config = { headers: {} }
+  ) => {
+    try {
+      const data = await executeHttpClientRequest(
+        async (options) => {
+          const res = await axios(
+            buildApiUrl(
+              `/adopt-parfums/shopping-lists/${id}?version=${version}`
+            ),
+            {
+              ...config,
+              method: 'delete',
+              headers: options.headers,
+              withCredentials: options.credentials === 'include',
+            }
+          );
+
+          return {
+            data: res.data,
+            statusCode: res.status,
+            getHeader: (key) => res.headers[key],
+          };
+        },
+        { userAgent, headers: config.headers }
+      );
+      return data;
+    } catch (error) {
+      //@ts-ignore
+      //console.log(error?.response?.data);
+      //@ts-ignore
+      return error?.response?.data;
+    }
+  };
+
+  return { createShoppingList, getShoppingLists, deleteShoppingListById };
 };
 
 export default useShoppingLists;
