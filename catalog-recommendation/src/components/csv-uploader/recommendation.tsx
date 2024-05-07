@@ -112,6 +112,7 @@ const CatalogRecommendation: React.FC = () => {
   return (
     <PageContentFull>
       <div>
+        <pre>Some content here</pre>
         <div className="flex">
           <div>
             <CSVUploader

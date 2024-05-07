@@ -1,10 +1,8 @@
 import type { ReactNode } from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Spacings from '@commercetools-uikit/spacings';
-import Channels from './components/channels';
-import Welcome from './components/welcome';
 import CatalogRecommendation from './components/csv-uploader';
-import CatalogsListing from './components/catalogs-listing';
+
 type ApplicationRoutesProps = {
   children?: ReactNode;
 };
