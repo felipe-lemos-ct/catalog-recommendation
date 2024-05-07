@@ -29,11 +29,6 @@ const ApplicationRoutes = (_props: ApplicationRoutesProps) => {
           <CatalogRecommendation />
         </Route>
       </Switch>
-      <Switch>
-        <Route path={`${match.path}/management`}>
-          <CatalogsListing />
-        </Route>
-      </Switch>
     </Spacings.Inset>
   );
 };

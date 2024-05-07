@@ -38,12 +38,6 @@ const config = {
       labelAllLocales: [],
       permissions: [PERMISSIONS.View],
     },
-    {
-      uriPath: 'management',
-      defaultLabel: 'Catalogs Management',
-      labelAllLocales: [],
-      permissions: [PERMISSIONS.View],
-    },
   ],
 };
 
